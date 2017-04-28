@@ -1,3 +1,4 @@
+#usage : only be tested on pyhton2.7  "python ming_apriori.py -s support -c confidence -i datafile"
 import sys
 import optparse
 import time
