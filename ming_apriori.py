@@ -48,7 +48,7 @@ def scan(dataset, candidates, minSup):
     support_dat = {}
     for key in sscnt:
         support = sscnt[key] / float(number_of_item) #of tx containing all items in AUB/total # of tx
-        if support >= minSup:
+        if sscnt[key] >= round(minSup*number_of_item):   #if minsup*len(dataset) is decimal number,it should be round to do calculation
             retlist.insert(0, key)
         support_dat[key] = support
     return retlist, support_dat
